@@ -27,6 +27,7 @@ pipeline {
         stage('Deliver') { 
             steps {
                 sh '''
+                    ls -lah
                     whoami
                     ./jenkins/scripts/deliver.sh
                 '''
