@@ -11,3 +11,24 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+.code-workspace
+
+.classpath
+.project
+.settings/
+
+##############################
+## Gradle
+##############################
+bin/
+build/
+.gradle
+.gradletasknamecache
+gradle-app.setting
+!gradle-wrapper.jar
+
