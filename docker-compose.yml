@@ -6,6 +6,8 @@ services:
         ports: 
             - "8080:8080"
             - "50000:50000"
+        networks: 
+            - jenkins
         container_name: my-jenkins
         environment: 
             DOCKER_HOST: tcp://docker:2376
@@ -23,6 +25,8 @@ services:
         ports: 
             - "3000:3000"
             - "2376:2376"
+        networks: 
+            - jenkins
         container_name: my-docker
         environment: 
             DOCKER_TLS_CERTDIR: /certs
@@ -35,3 +39,6 @@ volumes:
     jenkins-data:
     docker-certs:
     docker-data:
+
+networks: 
+    jenkins:
